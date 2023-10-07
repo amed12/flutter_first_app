@@ -5,50 +5,62 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "first_app",
-            "request": "launch",
-            "type": "dart"
+          "name": "Android 33",
+          "request": "launch",
+          "type": "dart",
+          "deviceId": "emulator-5555"
         },
         {
-            "name": "first_app (profile mode)",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "profile"
+          "name": "Android 29",
+          "request": "launch",
+          "type": "dart",
+          "deviceId": "emulator-5554"
         },
         {
-            "name": "first_app (release mode)",
-            "request": "launch",
-            "type": "dart",
-            "flutterMode": "release"
+          "name": "Iphone 8",
+          "request": "launch",
+          "type": "dart",
+          "deviceId": "1CE34FAB-6C66-4223-8B60-ED82C304316C"
         },
         {
-            "name": "27",
-            "request": "launch",
-            "type": "dart",
-            "deviceId": "emulator-5554"
-        },
-        {
-            "name": "33",
-            "request": "launch",
-            "type": "dart",
-            "deviceId": "emulator-5556",
-            "flutterMode": "release"
-        },
-        {
-            "name": "33-debug",
-            "request": "launch",
-            "type": "dart",
-            "deviceId": "emulator-5556",
-            "flutterMode": "debug"
-        },
-    ],
-    "compounds": [
-        {
-            "name": "All Devices",
-            "configurations": [
-                "27",
-                "33",
-            ],
+          "name": "Web",
+          "request": "launch",
+          "type": "dart",
+          "deviceId": "chrome"
         }
-    ]
+      ],
+      "compounds": [
+        {
+          "name": "All Apple",
+          "configurations": ["Iphone 8"]
+        },
+        {
+          "name": "All Android",
+          "configurations": ["Android 33", "Android 29"]
+        },
+        {
+          "name": "All Devices",
+          "configurations": [
+            "Android 33",
+            "Android 29",
+            "Iphone 8"
+          ]
+        },
+        {
+            "name": "All Devices Except",
+            "configurations": [
+              "Android 29",
+              "Iphone 8"
+            ]
+          },
+        {
+          "name": "All Platforms",
+          "configurations": [
+            "Android 33",
+            "Android 29",
+            "Iphone 8",
+            "Web"
+          ]
+        }
+      ]
 }
