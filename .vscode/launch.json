@@ -1,66 +1,71 @@
 {
-    // Use IntelliSense to learn about possible attributes.
-    // Hover to view descriptions of existing attributes.
-    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
-    "version": "0.2.0",
-    "configurations": [
-        {
-          "name": "Android 33",
-          "request": "launch",
-          "type": "dart",
-          "deviceId": "emulator-5555"
-        },
-        {
-          "name": "Android 29",
-          "request": "launch",
-          "type": "dart",
-          "deviceId": "emulator-5554"
-        },
-        {
-          "name": "Iphone 8",
-          "request": "launch",
-          "type": "dart",
-          "deviceId": "1CE34FAB-6C66-4223-8B60-ED82C304316C"
-        },
-        {
-          "name": "Web",
-          "request": "launch",
-          "type": "dart",
-          "deviceId": "chrome"
-        }
-      ],
-      "compounds": [
-        {
-          "name": "All Apple",
-          "configurations": ["Iphone 8"]
-        },
-        {
-          "name": "All Android",
-          "configurations": ["Android 33", "Android 29"]
-        },
-        {
-          "name": "All Devices",
-          "configurations": [
-            "Android 33",
-            "Android 29",
-            "Iphone 8"
-          ]
-        },
-        {
-            "name": "All Devices Except",
-            "configurations": [
-              "Android 29",
-              "Iphone 8"
-            ]
-          },
-        {
-          "name": "All Platforms",
-          "configurations": [
-            "Android 33",
-            "Android 29",
-            "Iphone 8",
-            "Web"
-          ]
-        }
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Flutter: Attach to Device",
+      "type": "dart",
+      "request": "attach"
+    },
+    {
+      "name": "Android 33",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "emulator-5555"
+    },
+    {
+      "name": "Android 29",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "emulator-5554"
+    },
+    {
+      "name": "Iphone 8",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "1CE34FAB-6C66-4223-8B60-ED82C304316C"
+    },
+    {
+      "name": "Web",
+      "request": "launch",
+      "type": "dart",
+      "deviceId": "chrome"
+    }
+  ],
+  "compounds": [
+    {
+      "name": "All Apple",
+      "configurations": ["Iphone 8"]
+    },
+    {
+      "name": "All Android",
+      "configurations": ["Android 33", "Android 29"]
+    },
+    {
+      "name": "All Devices",
+      "configurations": [
+        "Android 33",
+        "Android 29",
+        "Iphone 8"
       ]
+    },
+    {
+      "name": "All Devices Except",
+      "configurations": [
+        "Android 29",
+        "Iphone 8"
+      ]
+    },
+    {
+      "name": "All Platforms",
+      "configurations": [
+        "Android 33",
+        "Android 29",
+        "Iphone 8",
+        "Web"
+      ]
+    }
+  ]
 }
