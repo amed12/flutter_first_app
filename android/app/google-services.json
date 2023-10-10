@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "529574008904",
+    "project_id": "marinakamapps",
+    "storage_bucket": "marinakamapps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:529574008904:android:bde62c95c338b3e242e07d",
+        "android_client_info": {
+          "package_name": "com.example.first_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDIA_kdDLC9I4UJDeDDLNuy-aWCMiZnFBE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
