@@ -1,14 +1,14 @@
 import 'package:first_app/categories_screen.dart';
+import 'package:first_app/utils/my_text_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
-
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
-);
+  );
   runApp(const MyApp());
 }
 
@@ -30,10 +30,14 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.teal,
+        colorScheme: ColorScheme.fromSwatch().copyWith(
+          secondary: Colors.orange, // Your accent color
+        ),
+        fontFamily: 'Raleway',
+        textTheme: MyTextTheme.getTextTheme()
       ),
-      home: const CategoriesScreen("Bahan Baku"),
+      home: const CategoriesScreen("Inggridient Screen"),
     );
   }
 }
-
