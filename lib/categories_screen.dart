@@ -63,7 +63,7 @@ class CategoriesScreen extends StatelessWidget {
                             crossAxisSpacing: 20,
                             mainAxisSpacing: 20),
                     children: jsonData!
-                        .map((inggridient) => InggridientItem(inggridient))
+                        .map((inggridient) => InggridientItem(inggridient,'https://picsum.photos/200/200'))
                         .toList()));
               }
             },

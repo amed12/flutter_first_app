@@ -1,26 +1,33 @@
 import "package:flutter/material.dart";
 
 class InggridientItem extends StatelessWidget {
-
   final String inggridient;
-  const InggridientItem(this.inggridient, {super.key});
-  
-  @override
-  Widget build(BuildContext context){
-    return Container(
-      padding: const EdgeInsets.all(15),
-      decoration: BoxDecoration(
-        gradient: LinearGradient(colors: [
-          Colors.orange.withOpacity(0.7),
-          Colors.orange
-        ],
-        begin: Alignment.topLeft,
-        end: Alignment.bottomRight
-        ),
-        borderRadius: BorderRadius.circular(15)
-      ),
-      child: Text(inggridient),
+  final String imageUrl;
+  const InggridientItem(this.inggridient,this.imageUrl, {super.key});
 
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(15),
+          boxShadow: [
+            BoxShadow(
+                color: Colors.grey.withOpacity(0.5),
+                spreadRadius: 3,
+                blurRadius: 10,
+                offset: const Offset(0, 3))
+          ]),
+      child: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 10),
+        child: Column(children: [
+          Image.network(imageUrl, height: 100),
+          Text(
+            inggridient,
+            style: const TextTheme().labelLarge,
+          )
+        ]),
+      ),
     );
   }
 }
