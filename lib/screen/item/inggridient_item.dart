@@ -1,4 +1,4 @@
-import "package:first_app/recipes_screen.dart";
+import 'package:first_app/screen/recipes_screen.dart';
 import "package:flutter/material.dart";
 
 class InggridientItem extends StatelessWidget {

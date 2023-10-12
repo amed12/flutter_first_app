@@ -1,5 +1,6 @@
-import 'package:first_app/inggridient_screen.dart';
-import 'package:first_app/recipes_screen.dart';
+import 'package:first_app/const.dart';
+import 'package:first_app/screen/inggridient_screen.dart';
+import 'package:first_app/screen/recipes_screen.dart';
 import 'package:first_app/utils/my_text_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -20,7 +21,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Marinakam Apps',
+      title: MarinakamConst.appsTitle,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -38,9 +39,10 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Raleway',
         textTheme: MyTextTheme.getTextTheme()
       ),
-      home: const InggridientScreen("Inggridient Screen"),
+      initialRoute: '/',
       routes: {
-        '/recipes': (ctx) => const RecipesScreen(),
+        '/': (ctx) => const InggridientScreen(MarinakamConst.InggridientScreenTitle),
+        '/recipes': (ctx) => const RecipesScreen()
       },
     );
   }
