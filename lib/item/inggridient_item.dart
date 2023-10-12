@@ -7,9 +7,9 @@ class InggridientItem extends StatelessWidget {
   const InggridientItem(this.inggridient,this.imageUrl, {super.key});
 
   void generateRecipes(BuildContext ctx){
-    Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
-      return const RecipesScreen();
-    }));
+    Navigator.of(ctx).pushNamed('/recipes', arguments: {
+      'inggridient': inggridient
+    });
   }
 
   @override

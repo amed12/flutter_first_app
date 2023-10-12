@@ -5,9 +5,11 @@ const RecipesScreen({ Key? key }) : super(key: key);
 
   @override
   Widget build(BuildContext context){
+    final routeArgs = ModalRoute.of(context)?.settings.arguments as Map<String,String>;
+    final titleInggridient = routeArgs['inggridient'] ?? 'Recipes';
     return Scaffold(
       appBar: AppBar(
-        title: Text('Recipes by Inggridient',
+        title: Text(titleInggridient,
         style: Theme.of(context).textTheme.titleLarge),
       ),
       body: Container(),
