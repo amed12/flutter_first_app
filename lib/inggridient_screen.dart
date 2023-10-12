@@ -4,9 +4,9 @@ import 'package:firebase_storage/firebase_storage.dart' as firebase_storage;
 import 'dart:convert';
 import 'package:http/http.dart' as http;
 
-class CategoriesScreen extends StatelessWidget {
+class InggridientScreen extends StatelessWidget {
   final String title;
-  const CategoriesScreen(this.title, {super.key});
+  const InggridientScreen(this.title, {super.key});
 
   Future<List<dynamic>> fetchJsonData() async {
     try {

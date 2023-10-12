@@ -1,4 +1,4 @@
-import 'package:first_app/categories_screen.dart';
+import 'package:first_app/inggridient_screen.dart';
 import 'package:first_app/utils/my_text_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
         fontFamily: 'Raleway',
         textTheme: MyTextTheme.getTextTheme()
       ),
-      home: const CategoriesScreen("Inggridient Screen"),
+      home: const InggridientScreen("Inggridient Screen"),
     );
   }
 }
