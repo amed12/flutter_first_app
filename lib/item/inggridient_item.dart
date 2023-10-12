@@ -19,12 +19,12 @@ class InggridientItem extends StatelessWidget {
                 offset: const Offset(0, 3))
           ]),
       child: Padding(
-        padding: const EdgeInsets.symmetric(horizontal: 10),
+        padding: const EdgeInsets.all(10),
         child: Column(children: [
           Image.network(imageUrl, height: 100),
           Text(
             inggridient,
-            style: const TextTheme().labelLarge,
+            style: Theme.of(context).textTheme.titleLarge,
           )
         ]),
       ),
