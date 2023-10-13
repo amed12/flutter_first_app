@@ -1,15 +1,14 @@
-import 'package:first_app/screen/recipes_screen.dart';
+import 'package:first_app/screen/routes.dart';
 import "package:flutter/material.dart";
 
 class InggridientItem extends StatelessWidget {
   final String inggridient;
   final String imageUrl;
-  const InggridientItem(this.inggridient,this.imageUrl, {super.key});
+  const InggridientItem(this.inggridient, this.imageUrl, {super.key});
 
-  void generateRecipes(BuildContext ctx){
-    Navigator.of(ctx).pushNamed('/recipes', arguments: {
-      'inggridient': inggridient
-    });
+  void generateRecipes(BuildContext ctx) {
+    Navigator.of(ctx).pushNamed(Routes.recipesScreenRoute,
+        arguments: {Routes.recipesScreenArgs: inggridient});
   }
 
   @override

@@ -29,10 +29,11 @@ class MyTextTheme {
         fontWeight: FontWeight.w400, // Normal
       ),
       titleLarge: TextStyle(
-        fontFamily: 'RobotoCondensed',
-        fontSize: 20.0,
-        fontWeight: FontWeight.w400, // Normal
-      ),
+          fontFamily: 'RobotoCondensed',
+          fontSize: 20.0,
+          fontWeight: FontWeight.w400,
+          color: Colors.white // Normal
+          ),
       titleMedium: TextStyle(
         fontFamily: 'RobotoCondensed',
         fontSize: 16.0,

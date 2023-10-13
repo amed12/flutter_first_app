@@ -33,6 +33,7 @@ class InggridientScreen extends StatelessWidget {
       return [];
     }
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -54,17 +55,19 @@ class InggridientScreen extends StatelessWidget {
               } else {
                 // Use the JSON data in your app
                 final jsonData = snapshot.data;
-                return Padding(padding: const EdgeInsets.all(12),
-                child: GridView(
-                    gridDelegate:
-                        const SliverGridDelegateWithMaxCrossAxisExtent(
-                            maxCrossAxisExtent: 400,
-                            childAspectRatio: 3 / 2,
-                            crossAxisSpacing: 20,
-                            mainAxisSpacing: 20),
-                    children: jsonData!
-                        .map((inggridient) => InggridientItem(inggridient,'https://picsum.photos/200/200'))
-                        .toList()));
+                return Padding(
+                    padding: const EdgeInsets.all(12),
+                    child: GridView(
+                        gridDelegate:
+                            const SliverGridDelegateWithMaxCrossAxisExtent(
+                                maxCrossAxisExtent: 400,
+                                childAspectRatio: 3 / 2,
+                                crossAxisSpacing: 20,
+                                mainAxisSpacing: 20),
+                        children: jsonData!
+                            .map((inggridient) => InggridientItem(
+                                inggridient, 'https://picsum.photos/200/200'))
+                            .toList()));
               }
             },
           ),
