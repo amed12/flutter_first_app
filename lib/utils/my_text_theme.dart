@@ -32,7 +32,7 @@ class MyTextTheme {
           fontFamily: 'RobotoCondensed',
           fontSize: 20.0,
           fontWeight: FontWeight.w400,
-          color: Colors.white // Normal
+          color: Colors.black // Normal
           ),
       titleMedium: TextStyle(
         fontFamily: 'RobotoCondensed',
