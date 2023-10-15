@@ -12,13 +12,7 @@ class Recipes with _$Recipes {
     int? id,
     String? image,
     String? imageType,
-    int? likes,
-    int? missedIngredientCount,
-    List<MissedIngredient>? missedIngredients,
-    String? title,
-    List<dynamic>? unusedIngredients,
-    int? usedIngredientCount,
-    List<UsedIngredient>? usedIngredients,
+    String? title
   }) = _Recipes;
 
   factory Recipes.fromJson(Map<String, dynamic> json) =>
