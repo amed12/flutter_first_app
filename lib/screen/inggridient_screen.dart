@@ -33,10 +33,10 @@ class InggridientScreen extends StatelessWidget {
                     child: GridView(
                         gridDelegate:
                             const SliverGridDelegateWithMaxCrossAxisExtent(
-                                maxCrossAxisExtent: 400,
+                                maxCrossAxisExtent: 300 ,
                                 childAspectRatio: 3 / 2,
-                                crossAxisSpacing: 20,
-                                mainAxisSpacing: 20),
+                                crossAxisSpacing: 10,
+                                mainAxisSpacing: 10),
                         children: jsonData!
                             .map((inggridient) => InggridientItem(
                                 inggridient, 'https://picsum.photos/200/200'))
