@@ -11,8 +11,8 @@ class Recipes with _$Recipes {
   factory Recipes({
     int? id,
     String? image,
-    String? imageType,
-    String? title
+    int? likes,
+    String? title,
   }) = _Recipes;
 
   factory Recipes.fromJson(Map<String, dynamic> json) =>
