@@ -20,14 +20,34 @@ class RecipesItem extends StatelessWidget {
         margin: const EdgeInsets.all(10),
         child: Column(
           children: [
-            ClipRRect(
-              borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(15), topRight: Radius.circular(15)),
-              child: Image.network(
-                image ?? "",
-                height: 250,
-                fit: BoxFit.cover,
-              ),
+            Stack(
+              children: [
+                ClipRRect(
+                  borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(15),
+                      topRight: Radius.circular(15)),
+                  child: Image.network(
+                    image ?? "",
+                    height: 250,
+                    width: double.infinity,
+                    fit: BoxFit.cover,
+                  ),
+                ),
+                Positioned(
+                  bottom: 20,
+                  right: 10,
+                  child: Container(
+                    width: 220,
+                    color: Colors.black54,
+                    padding:
+                        const EdgeInsets.symmetric(vertical: 5, horizontal: 20),
+                    child: Text(title ?? '',
+                        style: Theme.of(context).textTheme.titleLarge,
+                        softWrap: true,
+                        overflow: TextOverflow.fade),
+                  ),
+                )
+              ],
             )
           ],
         ),

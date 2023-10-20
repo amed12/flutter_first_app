@@ -22,16 +22,8 @@ Recipes _$RecipesFromJson(Map<String, dynamic> json) {
 mixin _$Recipes {
   int? get id => throw _privateConstructorUsedError;
   String? get image => throw _privateConstructorUsedError;
-  String? get imageType => throw _privateConstructorUsedError;
   int? get likes => throw _privateConstructorUsedError;
-  int? get missedIngredientCount => throw _privateConstructorUsedError;
-  List<MissedIngredient>? get missedIngredients =>
-      throw _privateConstructorUsedError;
   String? get title => throw _privateConstructorUsedError;
-  List<dynamic>? get unusedIngredients => throw _privateConstructorUsedError;
-  int? get usedIngredientCount => throw _privateConstructorUsedError;
-  List<UsedIngredient>? get usedIngredients =>
-      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -43,17 +35,7 @@ abstract class $RecipesCopyWith<$Res> {
   factory $RecipesCopyWith(Recipes value, $Res Function(Recipes) then) =
       _$RecipesCopyWithImpl<$Res, Recipes>;
   @useResult
-  $Res call(
-      {int? id,
-      String? image,
-      String? imageType,
-      int? likes,
-      int? missedIngredientCount,
-      List<MissedIngredient>? missedIngredients,
-      String? title,
-      List<dynamic>? unusedIngredients,
-      int? usedIngredientCount,
-      List<UsedIngredient>? usedIngredients});
+  $Res call({int? id, String? image, int? likes, String? title});
 }
 
 /// @nodoc
@@ -71,14 +53,8 @@ class _$RecipesCopyWithImpl<$Res, $Val extends Recipes>
   $Res call({
     Object? id = freezed,
     Object? image = freezed,
-    Object? imageType = freezed,
     Object? likes = freezed,
-    Object? missedIngredientCount = freezed,
-    Object? missedIngredients = freezed,
     Object? title = freezed,
-    Object? unusedIngredients = freezed,
-    Object? usedIngredientCount = freezed,
-    Object? usedIngredients = freezed,
   }) {
     return _then(_value.copyWith(
       id: freezed == id
@@ -89,38 +65,14 @@ class _$RecipesCopyWithImpl<$Res, $Val extends Recipes>
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String?,
-      imageType: freezed == imageType
-          ? _value.imageType
-          : imageType // ignore: cast_nullable_to_non_nullable
-              as String?,
       likes: freezed == likes
           ? _value.likes
           : likes // ignore: cast_nullable_to_non_nullable
               as int?,
-      missedIngredientCount: freezed == missedIngredientCount
-          ? _value.missedIngredientCount
-          : missedIngredientCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      missedIngredients: freezed == missedIngredients
-          ? _value.missedIngredients
-          : missedIngredients // ignore: cast_nullable_to_non_nullable
-              as List<MissedIngredient>?,
       title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      unusedIngredients: freezed == unusedIngredients
-          ? _value.unusedIngredients
-          : unusedIngredients // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>?,
-      usedIngredientCount: freezed == usedIngredientCount
-          ? _value.usedIngredientCount
-          : usedIngredientCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      usedIngredients: freezed == usedIngredients
-          ? _value.usedIngredients
-          : usedIngredients // ignore: cast_nullable_to_non_nullable
-              as List<UsedIngredient>?,
     ) as $Val);
   }
 }
@@ -132,17 +84,7 @@ abstract class _$$RecipesImplCopyWith<$Res> implements $RecipesCopyWith<$Res> {
       __$$RecipesImplCopyWithImpl<$Res>;
   @override
   @useResult
-  $Res call(
-      {int? id,
-      String? image,
-      String? imageType,
-      int? likes,
-      int? missedIngredientCount,
-      List<MissedIngredient>? missedIngredients,
-      String? title,
-      List<dynamic>? unusedIngredients,
-      int? usedIngredientCount,
-      List<UsedIngredient>? usedIngredients});
+  $Res call({int? id, String? image, int? likes, String? title});
 }
 
 /// @nodoc
@@ -158,14 +100,8 @@ class __$$RecipesImplCopyWithImpl<$Res>
   $Res call({
     Object? id = freezed,
     Object? image = freezed,
-    Object? imageType = freezed,
     Object? likes = freezed,
-    Object? missedIngredientCount = freezed,
-    Object? missedIngredients = freezed,
     Object? title = freezed,
-    Object? unusedIngredients = freezed,
-    Object? usedIngredientCount = freezed,
-    Object? usedIngredients = freezed,
   }) {
     return _then(_$RecipesImpl(
       id: freezed == id
@@ -176,38 +112,14 @@ class __$$RecipesImplCopyWithImpl<$Res>
           ? _value.image
           : image // ignore: cast_nullable_to_non_nullable
               as String?,
-      imageType: freezed == imageType
-          ? _value.imageType
-          : imageType // ignore: cast_nullable_to_non_nullable
-              as String?,
       likes: freezed == likes
           ? _value.likes
           : likes // ignore: cast_nullable_to_non_nullable
               as int?,
-      missedIngredientCount: freezed == missedIngredientCount
-          ? _value.missedIngredientCount
-          : missedIngredientCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      missedIngredients: freezed == missedIngredients
-          ? _value._missedIngredients
-          : missedIngredients // ignore: cast_nullable_to_non_nullable
-              as List<MissedIngredient>?,
       title: freezed == title
           ? _value.title
           : title // ignore: cast_nullable_to_non_nullable
               as String?,
-      unusedIngredients: freezed == unusedIngredients
-          ? _value._unusedIngredients
-          : unusedIngredients // ignore: cast_nullable_to_non_nullable
-              as List<dynamic>?,
-      usedIngredientCount: freezed == usedIngredientCount
-          ? _value.usedIngredientCount
-          : usedIngredientCount // ignore: cast_nullable_to_non_nullable
-              as int?,
-      usedIngredients: freezed == usedIngredients
-          ? _value._usedIngredients
-          : usedIngredients // ignore: cast_nullable_to_non_nullable
-              as List<UsedIngredient>?,
     ));
   }
 }
@@ -215,20 +127,7 @@ class __$$RecipesImplCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$RecipesImpl implements _Recipes {
-  _$RecipesImpl(
-      {this.id,
-      this.image,
-      this.imageType,
-      this.likes,
-      this.missedIngredientCount,
-      final List<MissedIngredient>? missedIngredients,
-      this.title,
-      final List<dynamic>? unusedIngredients,
-      this.usedIngredientCount,
-      final List<UsedIngredient>? usedIngredients})
-      : _missedIngredients = missedIngredients,
-        _unusedIngredients = unusedIngredients,
-        _usedIngredients = usedIngredients;
+  _$RecipesImpl({this.id, this.image, this.likes, this.title});
 
   factory _$RecipesImpl.fromJson(Map<String, dynamic> json) =>
       _$$RecipesImplFromJson(json);
@@ -238,50 +137,13 @@ class _$RecipesImpl implements _Recipes {
   @override
   final String? image;
   @override
-  final String? imageType;
-  @override
   final int? likes;
   @override
-  final int? missedIngredientCount;
-  final List<MissedIngredient>? _missedIngredients;
-  @override
-  List<MissedIngredient>? get missedIngredients {
-    final value = _missedIngredients;
-    if (value == null) return null;
-    if (_missedIngredients is EqualUnmodifiableListView)
-      return _missedIngredients;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
   final String? title;
-  final List<dynamic>? _unusedIngredients;
-  @override
-  List<dynamic>? get unusedIngredients {
-    final value = _unusedIngredients;
-    if (value == null) return null;
-    if (_unusedIngredients is EqualUnmodifiableListView)
-      return _unusedIngredients;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
-
-  @override
-  final int? usedIngredientCount;
-  final List<UsedIngredient>? _usedIngredients;
-  @override
-  List<UsedIngredient>? get usedIngredients {
-    final value = _usedIngredients;
-    if (value == null) return null;
-    if (_usedIngredients is EqualUnmodifiableListView) return _usedIngredients;
-    // ignore: implicit_dynamic_type
-    return EqualUnmodifiableListView(value);
-  }
 
   @override
   String toString() {
-    return 'Recipes(id: $id, image: $image, imageType: $imageType, likes: $likes, missedIngredientCount: $missedIngredientCount, missedIngredients: $missedIngredients, title: $title, unusedIngredients: $unusedIngredients, usedIngredientCount: $usedIngredientCount, usedIngredients: $usedIngredients)';
+    return 'Recipes(id: $id, image: $image, likes: $likes, title: $title)';
   }
 
   @override
@@ -291,36 +153,13 @@ class _$RecipesImpl implements _Recipes {
             other is _$RecipesImpl &&
             (identical(other.id, id) || other.id == id) &&
             (identical(other.image, image) || other.image == image) &&
-            (identical(other.imageType, imageType) ||
-                other.imageType == imageType) &&
             (identical(other.likes, likes) || other.likes == likes) &&
-            (identical(other.missedIngredientCount, missedIngredientCount) ||
-                other.missedIngredientCount == missedIngredientCount) &&
-            const DeepCollectionEquality()
-                .equals(other._missedIngredients, _missedIngredients) &&
-            (identical(other.title, title) || other.title == title) &&
-            const DeepCollectionEquality()
-                .equals(other._unusedIngredients, _unusedIngredients) &&
-            (identical(other.usedIngredientCount, usedIngredientCount) ||
-                other.usedIngredientCount == usedIngredientCount) &&
-            const DeepCollectionEquality()
-                .equals(other._usedIngredients, _usedIngredients));
+            (identical(other.title, title) || other.title == title));
   }
 
   @JsonKey(ignore: true)
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      id,
-      image,
-      imageType,
-      likes,
-      missedIngredientCount,
-      const DeepCollectionEquality().hash(_missedIngredients),
-      title,
-      const DeepCollectionEquality().hash(_unusedIngredients),
-      usedIngredientCount,
-      const DeepCollectionEquality().hash(_usedIngredients));
+  int get hashCode => Object.hash(runtimeType, id, image, likes, title);
 
   @JsonKey(ignore: true)
   @override
@@ -340,14 +179,8 @@ abstract class _Recipes implements Recipes {
   factory _Recipes(
       {final int? id,
       final String? image,
-      final String? imageType,
       final int? likes,
-      final int? missedIngredientCount,
-      final List<MissedIngredient>? missedIngredients,
-      final String? title,
-      final List<dynamic>? unusedIngredients,
-      final int? usedIngredientCount,
-      final List<UsedIngredient>? usedIngredients}) = _$RecipesImpl;
+      final String? title}) = _$RecipesImpl;
 
   factory _Recipes.fromJson(Map<String, dynamic> json) = _$RecipesImpl.fromJson;
 
@@ -356,21 +189,9 @@ abstract class _Recipes implements Recipes {
   @override
   String? get image;
   @override
-  String? get imageType;
-  @override
   int? get likes;
   @override
-  int? get missedIngredientCount;
-  @override
-  List<MissedIngredient>? get missedIngredients;
-  @override
   String? get title;
-  @override
-  List<dynamic>? get unusedIngredients;
-  @override
-  int? get usedIngredientCount;
-  @override
-  List<UsedIngredient>? get usedIngredients;
   @override
   @JsonKey(ignore: true)
   _$$RecipesImplCopyWith<_$RecipesImpl> get copyWith =>
