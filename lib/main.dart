@@ -1,4 +1,5 @@
 import 'package:first_app/const.dart';
+import 'package:first_app/screen/home_screen.dart';
 import 'package:first_app/screen/inggridient_screen.dart';
 import 'package:first_app/screen/recipes_screen.dart';
 import 'package:first_app/screen/routes.dart';
@@ -42,7 +43,7 @@ class MyApp extends StatelessWidget {
       initialRoute: '/',
       routes: {
         '/': (ctx) =>
-            const InggridientScreen(MarinakamConst.inggridientScreenTitle),
+            const HomeScreen(title: MarinakamConst.appsTitle),
         Routes.recipesScreenRoute: (ctx) => const RecipesScreen()
       },
     );
