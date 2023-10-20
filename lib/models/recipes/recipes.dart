@@ -1,8 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-import 'missed_ingredient.dart';
-import 'used_ingredient.dart';
-
 part 'recipes.freezed.dart';
 part 'recipes.g.dart';
 
