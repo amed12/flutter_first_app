@@ -1,7 +1,7 @@
-import 'package:first_app/screen/item/inggridient_item.dart';
+import 'package:first_app/screen/item/card_item.dart';
+import 'package:first_app/screen/routes.dart';
 import 'package:first_app/services/fire_storage.dart';
 import 'package:flutter/material.dart';
-
 
 class InggridientScreen extends StatelessWidget {
   final String title;
@@ -28,17 +28,21 @@ class InggridientScreen extends StatelessWidget {
               } else {
                 // Use the JSON data in your app
                 final jsonData = snapshot.data;
-                return GridView(
-                    gridDelegate:
-                        const SliverGridDelegateWithMaxCrossAxisExtent(
-                            maxCrossAxisExtent: 300 ,
-                            childAspectRatio: 3 / 2,
-                            crossAxisSpacing: 10,
-                            mainAxisSpacing: 10),
-                    children: jsonData!
-                        .map((inggridient) => InggridientItem(
-                            inggridient, 'https://picsum.photos/200/200'))
-                        .toList());
+                return ListView.builder(
+                  itemBuilder: ((context, index) {
+                    final data = jsonData?[index] as String;
+                    return CardItem(
+                      onPressed: () {
+                        Navigator.of(context).pushNamed(
+                            Routes.recipesScreenRoute,
+                            arguments: {Routes.recipesScreenArgs: data});
+                      },
+                      title: data,
+                      urlImage: 'https://picsum.photos/200/300',
+                    );
+                  }),
+                  itemCount: jsonData?.length,
+                );
               }
             },
           ),
