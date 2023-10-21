@@ -1,12 +1,11 @@
-import 'package:first_app/const.dart';
-import 'package:first_app/screen/home_screen.dart';
-import 'package:first_app/screen/inggridient_screen.dart';
-import 'package:first_app/screen/recipes_screen.dart';
-import 'package:first_app/screen/routes.dart';
-import 'package:first_app/utils/my_text_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'const.dart';
 import 'firebase_options.dart';
+import 'screen/home_screen.dart';
+import 'screen/recipes_screen.dart';
+import 'screen/routes.dart';
+import 'utils/my_text_theme.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

@@ -1,6 +1,6 @@
-import 'package:first_app/models/recipes/recipes.dart';
-import 'package:first_app/screen/item/recipes_item.dart';
-import 'package:first_app/services/spoonacular_food_api.dart';
+import '../models/recipes/recipes.dart';
+import '../screen/item/recipes_item.dart';
+import '../services/spoonacular_food_api.dart';
 import 'package:flutter/material.dart';
 
 class RecipesScreen extends StatelessWidget {

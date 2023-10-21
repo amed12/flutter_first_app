@@ -1,6 +1,6 @@
 import 'dart:convert';
-import 'package:first_app/models/recipes/recipes.dart';
-import 'package:first_app/services/keys.dart';
+import '../models/recipes/recipes.dart';
+import '../services/keys.dart';
 import 'package:http/http.dart' as http;
 
 class SpoonacularFoodApi {

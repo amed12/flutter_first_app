@@ -1,7 +1,9 @@
 import 'dart:convert';
 
-import 'package:first_app/models/unsplash_model.dart';
-import 'package:first_app/services/keys.dart';
+import 'package:flutter/foundation.dart';
+
+import '../models/unsplash_model.dart';
+import '../services/keys.dart';
 import 'package:http/http.dart' as http;
 
 class UnsplashImageApi {
@@ -34,7 +36,9 @@ class UnsplashImageApi {
       return json.decode(response.body);
     } else {
       // something went wrong :(
-      print("Http error: ${response.statusCode}");
+      if (kDebugMode) {
+        print("Http error: ${response.statusCode}");
+      }
       // return empty list
       return [];
     }

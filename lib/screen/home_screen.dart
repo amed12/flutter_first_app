@@ -1,14 +1,17 @@
-import 'package:first_app/screen/item/card_item.dart';
-import 'package:first_app/screen/routes.dart';
-import 'package:first_app/services/fire_storage.dart';
 import 'package:flutter/material.dart';
+
+import '../services/fire_storage.dart';
+import 'item/card_item.dart';
+import 'routes.dart';
 
 class HomeScreen extends StatefulWidget {
   final String title;
   const HomeScreen({Key? key, required this.title}) : super(key: key);
 
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  State<HomeScreen> createState() {
+    return _HomeScreenState();
+  }
 }
 
 class _HomeScreenState extends State<HomeScreen> {
@@ -68,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 return Expanded(
                   child: ListView.builder(
                     itemBuilder: ((context, index) {
-                      final data = filteredItems[index];
+                      final data = filteredItems.isEmpty ? items[index] : filteredItems[index];
                       return CardItem(
                         onPressed: () {
                           Navigator.of(context).pushNamed(
@@ -79,7 +82,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         urlImage: 'https://picsum.photos/200/300',
                       );
                     }),
-                    itemCount: filteredItems.length,
+                    itemCount: filteredItems.isEmpty ? items.length : filteredItems.length,
                   ),
                 );
               }

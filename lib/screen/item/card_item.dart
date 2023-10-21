@@ -1,6 +1,8 @@
-import 'package:first_app/models/unsplash_model.dart';
-import 'package:first_app/services/unsplash_image_api.dart';
+
 import 'package:flutter/material.dart';
+
+import '../../models/unsplash_model.dart';
+import '../../services/unsplash_image_api.dart';
 
 class CardItem extends StatelessWidget {
   final VoidCallback onPressed;
